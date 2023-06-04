@@ -48,3 +48,4 @@ chmod +x /bin/do-init
 
 # Enable do-init service
 rc-update add do-init default
+rc-update add docker default

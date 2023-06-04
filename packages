@@ -3,6 +3,7 @@ e2fsprogs-extra
 zsh
 htop
 docker
+docker-compose
 curl
 wget
 vim
