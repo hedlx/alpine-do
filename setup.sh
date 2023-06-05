@@ -27,6 +27,13 @@ wget -T 5 http://169.254.169.254/metadata/v1/hostname    -q -O /etc/hostname
 wget -T 5 http://169.254.169.254/metadata/v1/public-keys -q -O /root/.ssh/authorized_keys
 hostname -F /etc/hostname
 chmod 600 /root/.ssh/authorized_keys
+
+fallocate -l 2G /swap
+chmod 600 /swap
+mkswap /swap
+swapon /swap
+echo "/swap swap swap defaults 0 0" >> /etc/fstab
+
 rc-update del do-init default
 exit 0
 EOF
